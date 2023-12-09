@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+}
+
+body {
+  background: url(../../../public/assets/main_bg.jpg) top center no-repeat;
+}
+
+#root {
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+.App {
+  margin-top: 100px;
+}
+.App header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.App header input {
+  text-align: center;
+  max-width: 600px;
+  outline: none;
+  border-radius: 30px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.13);
+  border: none;
+  color: #fefefe;
+}
+.App header .getWeatherBtn {
+  max-width: 400px;
+  font-size: 30px;
+  padding: 15px 70px;
+  text-align: center;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  background-color: rgba(45, 74, 14, 0.2);
+  color: #fefefe;
+}
+.App header .getWeatherBtn:hover {
+  letter-spacing: 2px;
+}
+.App section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.App section .mainInfo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  text-align: left;
+  color: #fefefe;
+}
+.App section .mainInfo__error {
+  font-size: 100px;
+  font-weight: 600;
+}
+.App section .mainInfo__city {
+  font-size: 100px;
+  font-weight: 600;
+}
+.App section .mainInfo__degrees {
+  font-size: 140px;
+  font-weight: 600;
+}
+.App section .mainInfo__weather {
+  font-size: 60px;
+}
+.App section .secondaryInfo {
+  padding: 20px;
+  color: rgba(254, 254, 254, 0.8);
+  border-radius: 30px;
+  text-align: right;
+  font-size: 10px;
+  background-color: rgba(128, 128, 128, 0.2);
+}
+
+@media screen and (max-width: 1700px) {
+  #root {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 870px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  .mainInfo, .secondaryInfo {
+    align-items: center;
+  }
+  .secondaryInfo__wind, .secondaryInfo__humidity {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 630px) {
+  input {
+    width: 300px;
+  }
+}/*# sourceMappingURL=main.css.map */

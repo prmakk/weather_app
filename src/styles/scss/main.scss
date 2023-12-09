@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+}
+
+body{
+    background: url(../../../public/assets/main_bg.jpg)top center no-repeat;
+}
+
+#root{
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+.App{
+    margin-top: 100px;
+
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        input{
+            text-align: center;
+            max-width: 600px;
+            outline: none;
+            border-radius: 30px;
+            padding: 10px;
+            background: rgba($color: #000000, $alpha: 0.13);
+            border: none;
+            color: #fefefe;
+        }
+
+        .getWeatherBtn{
+            max-width: 400px;
+            font-size: 30px;
+            padding: 15px 70px;
+            text-align: center;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            transition: .3s all ease;
+            background-color: rgba($color: #2d4a0e, $alpha: 0.2);
+            color: #fefefe;
+
+            &:hover{
+                letter-spacing: 2px;
+            }
+        }
+    }
+
+    section{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .mainInfo{
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            text-align: left;
+            color: #fefefe;
+    
+            &__error{
+                font-size: 100px;
+                font-weight: 600;
+            }
+    
+            &__city{
+                font-size: 100px;
+                font-weight: 600;
+            }
+    
+            &__degrees{
+                font-size: 140px;
+                font-weight: 600;
+            }
+    
+            &__weather{
+                font-size: 60px;
+            }
+        }
+
+        .secondaryInfo{
+            padding: 20px;
+            color: rgba($color: #fefefe, $alpha: 0.8);
+            border-radius: 30px;
+            text-align: right;
+            font-size: 10px;
+            background-color: rgba($color: gray, $alpha: 0.2);
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1700px) {
+    #root{
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    section{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .mainInfo,.secondaryInfo{
+        align-items: center;
+    }
+
+    .secondaryInfo__wind, .secondaryInfo__humidity{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    input{
+        width: 300px;
+    }
+}
